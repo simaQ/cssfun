@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>rotating</title>
+    <style>
+      .logo {
+        width: 220px;
+        height: 220px;
+        border: 20px solid #78B2F2;
+        position: relative;
+        -webkit-animation: rotating 2s linear infinite;
+        -moz-animation: rotating 2s linear infinite;
+        animation: rotating 2s linear infinite;
+      }
+
+      .logo:before, .logo:after {
+        position: absolute;
+        content: '';
+      }
+
+      .logo:before {
+        width: 40px;
+        height: 80px;
+        border: 20px solid black;
+        border-right-style: none;
+        left: 40px;
+        top: 50px;
+      }
+
+      .logo:after {
+        width: 40px;
+        height: 80px;
+        border: 20px solid black;
+        border-left-style: none;
+        right: 40px;
+        top: 50px;
+      }
+
+      @-webkit-keyframes rotating {
+        0% {-webkit-transform: rotate(0deg);}
+        25% {-webkit-transform: rotate(90deg);}
+        50% {-webkit-transform: rotate(180deg);}
+        75% {-webkit-transform: rotate(270deg);}
+        100% {-webkit-transform: rotate(360deg);}
+      }
+
+      @-moz-keyframes rotating {
+        0% {-moz-transform: rotate(0deg);}
+        25% {-moz-transform: rotate(90deg);}
+        50% {-moz-transform: rotate(180deg);}
+        75% {-moz-transform: rotate(270deg);}
+        100% {-moz-transform: rotate(360deg);}
+      }
+
+      @keyframes rotating {
+        0% {transform: rotate(0deg);}
+        25% {transform: rotate(90deg);}
+        50% {transform: rotate(180deg);}
+        75% {transform: rotate(270deg);}
+        100% {transform: rotate(360deg);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class='logo'></div>
+  </body>
+</html>
