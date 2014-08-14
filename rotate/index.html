@@ -5,13 +5,15 @@
     <title>rotating</title>
     <style>
       .logo {
-        width: 220px;
-        height: 220px;
-        border: 20px solid #78B2F2;
+        width: 60px;
+        height: 80px;
+        border-right: 20px solid #78B2F2;
+        border-left: 20px solid #78B2F2;
         position: relative;
-        -webkit-animation: rotating 2s linear infinite;
-        -moz-animation: rotating 2s linear infinite;
-        animation: rotating 2s linear infinite;
+        margin-left: 250px;
+        -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+        -moz-animation: rotateplane 1.2s infinite ease-in-out;
+        animation: rotateplane 1.2s infinite ease-in-out;
       }
 
       .logo:before, .logo:after {
@@ -20,46 +22,40 @@
       }
 
       .logo:before {
-        width: 40px;
-        height: 80px;
-        border: 20px solid black;
-        border-right-style: none;
-        left: 40px;
-        top: 50px;
+        width: 20px;
+        height: 20px;
+        border-right: 20px solid #78B2F2;
+        border-left: 20px solid #78B2F2;
       }
 
       .logo:after {
-        width: 40px;
-        height: 80px;
-        border: 20px solid black;
-        border-left-style: none;
-        right: 40px;
-        top: 50px;
+        width: 20px;
+        height: 20px;
+        border-right: 20px solid #78B2F2;
+        border-left: 20px solid #78B2F2;
+        top: 60px;
       }
 
-      @-webkit-keyframes rotating {
-        0% {-webkit-transform: rotate(0deg);}
-        25% {-webkit-transform: rotate(90deg);}
-        50% {-webkit-transform: rotate(180deg);}
-        75% {-webkit-transform: rotate(270deg);}
-        100% {-webkit-transform: rotate(360deg);}
-      }
+    @-webkit-keyframes rotateplane {
+      0% { -webkit-transform: perspective(120px) }
+      50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+      100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+    }
 
-      @-moz-keyframes rotating {
-        0% {-moz-transform: rotate(0deg);}
-        25% {-moz-transform: rotate(90deg);}
-        50% {-moz-transform: rotate(180deg);}
-        75% {-moz-transform: rotate(270deg);}
-        100% {-moz-transform: rotate(360deg);}
+    @keyframes rotateplane {
+      0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
       }
-
-      @keyframes rotating {
-        0% {transform: rotate(0deg);}
-        25% {transform: rotate(90deg);}
-        50% {transform: rotate(180deg);}
-        75% {transform: rotate(270deg);}
-        100% {transform: rotate(360deg);}
+      50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
       }
+      100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      }
+    }
     </style>
   </head>
   <body>
