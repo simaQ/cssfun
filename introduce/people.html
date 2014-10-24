@@ -1,0 +1,136 @@
+<!-- Coder: Emma -->
+<!-- Date: 2014-10-24 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>A fresh and funny Personal introduction</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="./normalize.css" rel="stylesheet">
+  <style>
+  * {
+    --moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    font: 16px/1.5 Source Code Pro, Inconsolata, Menlo, monospace;
+    background-color: white;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    width: 990px;
+    margin: 100px auto;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    border-bottom: 1px dashed #ccc;
+    padding: 0 3px;
+  }
+  a:hover {
+    border-bottom-color: rgba(255, 102, 102, .5);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #ccc;
+  }
+  article {
+    margin-left: 580px;
+  }
+  ul#member {
+    list-style: none;
+    padding: 0;
+    position: relative;
+  }
+  ul#member:before {
+    display: block;
+    content: "#members {";
+    position: absolute;
+    top: -35px;
+    left: -125px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  ul#member:after {
+    display: block;
+    content: "}";
+    position: absolute;
+    bottom: 0;
+    left: -125px;
+    bottom: -35px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  ul#member li {
+    margin-bottom: 5px;
+  }
+  span.portrait {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    transition: all ease-in .5s;
+    background: #6495ED url(http://cssday.nl/_img/2014/speakers/ana-maria-tudor.jpg) -50px -75px no-repeat;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .4);
+  }
+  /* n从0开始 */
+
+  #member li:nth-child(4n+1) span {
+    left: -530px;
+  }
+  #member li:nth-child(4n+2) span {
+    left: -460px;
+  }
+  #member li:nth-child(4n+3) span {
+    left: -390px;
+  }
+  #member li:nth-child(4n+4) span {
+    left: -320px;
+  }
+  #member li:nth-child(-n+12) span {
+    top: 180px;
+  }
+  #member li:nth-child(-n+8) span {
+    top: 130px;
+  }
+  #member li:nth-child(-n+4) span {
+    top: 80px;
+  }
+  a:hover span {
+    width: 200px;
+    height: 200px;
+    margin-top: -80px;
+    margin-left: -30px;
+    z-index: 9999;
+    background-position: 0 0;
+    box-shadow: 1px 1px 5px;
+  }
+  </style>
+</head>
+
+<body>
+  <article>
+    <section>
+      <ul id="member">
+        <li><a href="javascript:;">1111<span class="portrait" id="1"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="2"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="3"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="4"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="5"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="6"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="7"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="8"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="9"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="10"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="11"></span></a>: XXXXXX</li>
+        <li><a href="javascript:;">1111<span class="portrait" id="12"></span></a>: XXXXXX</li>
+      </ul>
+    </section>
+  </article>
+
+</body>
+
+</html>
