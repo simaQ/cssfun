@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>跳跃的红包</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+  a,
+a:link,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+}
+.wrapper h1 {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #f00;
+}
+.wrapper .bonus {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  margin-left: -40px;
+  width: 80px;
+  height: 100px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #f00;
+  -webkit-transition: all 0.75s ease;
+          transition: all 0.75s ease;
+  -webkit-animation-name: shaking;
+          animation-name: shaking;
+}
+.wrapper .bonus:after {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  content: '';
+  width: 80px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 3px 0 2px #ff0;
+  z-index: 3;
+}
+.wrapper .bonus:before {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  margin-left: -15px;
+  content: '￥';
+  width: 30px;
+  height: 30px;
+  line-height: 35px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f00;
+  background-color: #ff0;
+  border-radius: 50%;
+  z-index: 4;
+}
+.surprises .fly {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  color: #f37476;
+  z-index: 0;
+  opacity: 0;
+  font-size: 10px;
+  -webkit-animation-duration: 1.65s;
+          animation-duration: 1.65s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-name: flying;
+          animation-name: flying;
+}
+.surprises .fly:nth-child(1) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  left: 150px;
+}
+.surprises .fly:nth-child(2) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  left: 130px;
+}
+.surprises .fly:nth-child(3) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  left: 165px;
+}
+.surprises .fly:nth-child(4) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+  left: 110px;
+}
+.surprises .fly:nth-child(5) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  left: 175px;
+}
+.surprises .fly:nth-child(6) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+  left: 137px;
+}
+.surprises .fly:nth-child(7) {
+  -webkit-animation-delay: 1.15s;
+          animation-delay: 1.15s;
+  left: 185px;
+}
+.surprises .fly:nth-child(8) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+  left: 118px;
+}
+.hearts {
+  position: relative;
+}
+.hearts:before,
+.hearts:after {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 10px;
+  background: #ff370f;
+  border-radius: 3px 3px 0 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 50%;
+      -ms-transform-origin: 10% 50%;
+          transform-origin: 10% 50%;
+}
+.hearts:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 110% 68%;
+      -ms-transform-origin: 110% 68%;
+          transform-origin: 110% 68%;
+}
+.jumping,
+.shaking {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+@-webkit-keyframes jumping {
+  0% {
+    bottom: 5px;
+    -webkit-transform: rotate(-10deg) scale(0.98);
+            transform: rotate(-10deg) scale(0.98);
+  }
+  10% {
+    bottom: 30px;
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    bottom: 5px;
+    -webkit-transform: rotate(10deg) scale(0.98);
+            transform: rotate(10deg) scale(0.98);
+  }
+  60% {
+    bottom: 30px;
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  100% {
+    bottom: 5px;
+    -webkit-transform: rotate(-10deg) scale(0.98);
+            transform: rotate(-10deg) scale(0.98);
+  }
+}
+@keyframes jumping {
+  0% {
+    bottom: 5px;
+    -webkit-transform: rotate(-10deg) scale(0.98);
+            transform: rotate(-10deg) scale(0.98);
+  }
+  10% {
+    bottom: 30px;
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    bottom: 5px;
+    -webkit-transform: rotate(10deg) scale(0.98);
+            transform: rotate(10deg) scale(0.98);
+  }
+  60% {
+    bottom: 30px;
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  100% {
+    bottom: 5px;
+    -webkit-transform: rotate(-10deg) scale(0.98);
+            transform: rotate(-10deg) scale(0.98);
+  }
+}
+@-webkit-keyframes shaking {
+  0% {
+    margin-left: -35px;
+  }
+  10% {
+    margin-left: -45px;
+  }
+  20% {
+    margin-left: -35px;
+  }
+  30% {
+    margin-left: -45px;
+  }
+  40% {
+    margin-left: -35px;
+  }
+  50% {
+    margin-left: -40px;
+  }
+  65% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 5px;
+  }
+}
+@keyframes shaking {
+  0% {
+    margin-left: -35px;
+  }
+  10% {
+    margin-left: -45px;
+  }
+  20% {
+    margin-left: -35px;
+  }
+  30% {
+    margin-left: -45px;
+  }
+  40% {
+    margin-left: -35px;
+  }
+  50% {
+    margin-left: -40px;
+  }
+  65% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 5px;
+  }
+}
+@-webkit-keyframes flying {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    opacity: 1;
+  }
+  100% {
+    top: -60px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    opacity: 0;
+  }
+}
+@keyframes flying {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    opacity: 1;
+  }
+  100% {
+    top: -60px;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    opacity: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="surprises">
+    <div class="fly">10w</div>
+    <div class="fly">5毛</div>
+    <div class="fly">100</div>
+    <div class="fly">666</div>
+    <div class="fly">999</div>
+    <div class="fly">
+      <i class="hearts"></i>
+    </div>
+    <div class="fly">
+      $
+    </div>
+    <div class="fly">
+      <i class="hearts"></i>
+    </div>
+  </div>
+  <div class="bonus jumping">
+  </div>
+</div>
+</body>
+</html>
