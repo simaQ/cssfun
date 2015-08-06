@@ -7,13 +7,13 @@
 - 诊断：项目中发现 textarea 底部总会都 5px 左右的padding
 - 配方：
 
-```css
-textarea {
-  vertical-align: bottom;
-}
-```
+    ```css
+    textarea {
+        vertical-align: bottom;
+    }
+    ```
 
-使用 display: block; 也行。。。 研究下
+    使用 display: block; 也行。。。 研究下
 
 #### 移除 IE 10 及以上 input 自带的 clear button 以及 type="password" 带有的 icon
 
@@ -23,20 +23,20 @@ textarea {
 
 - 配方：
 
-```css
-::-ms-clear {
-   display: none;
-}
+    ```css
+    ::-ms-clear {
+       display: none;
+    }
 
-::-ms-reveal {
-   display: none;
-}
-```
+    ::-ms-reveal {
+       display: none;
+    }
+    ```
 
-see more:
-- http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs
-- http://msdn.microsoft.com/en-us/library/windows/apps/hh465740.aspx
+    see more:
+    - http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs
+    - http://msdn.microsoft.com/en-us/library/windows/apps/hh465740.aspx
 
 #### display: inline-block 元素之间的间距移除
 
-see solution at https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+    see solution at https://css-tricks.com/fighting-the-space-between-inline-block-elements/
