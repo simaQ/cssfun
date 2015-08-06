@@ -17,7 +17,9 @@ textarea {
 
 #### 移除 IE 10 及以上 input 自带的 clear button 以及 type="password" 带有的 icon
 
-- 诊断：![rm](https://cloud.githubusercontent.com/assets/6628666/9102004/3c4d6cb2-3c20-11e5-9c6f-613e71d992bc.png)
+- 诊断：
+  
+    ![rm](https://cloud.githubusercontent.com/assets/6628666/9102004/3c4d6cb2-3c20-11e5-9c6f-613e71d992bc.png)
 
 - 配方：
 
