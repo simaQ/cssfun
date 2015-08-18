@@ -39,4 +39,6 @@
 
 #### display: inline-block 元素之间的间距移除
 
-    see solution at <https://css-tricks.com/fighting-the-space-between-inline-block-elements/> or <http://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/>
+see solution at:
+- <https://css-tricks.com/fighting-the-space-between-inline-block-elements/>
+- <http://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/>
