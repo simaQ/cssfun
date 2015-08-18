@@ -42,3 +42,11 @@
 see solution at:
 - <https://css-tricks.com/fighting-the-space-between-inline-block-elements/>
 - <http://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/>
+
+#### IE8 实现兼容 rgba
+
+解决方案：
+
+1. http://www.liuhaihua.cn/archives/9256.html  DXImageTransform.Microsoft.gradient
+
+2. less 解决 http://www.lesscss.net/functions/#color-definition-argb-color-
