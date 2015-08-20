@@ -45,12 +45,11 @@ see solution at:
 
 #### IE8 实现兼容 rgba
 
-解决方案：
+  - 解决方案：
 
-1. http://www.liuhaihua.cn/archives/9256.html  DXImageTransform.Microsoft.gradient
+  1. http://www.liuhaihua.cn/archives/9256.html  DXImageTransform.Microsoft.gradient
 
-2. less 解决 http://www.lesscss.net/functions/#color-definition-argb-color-
+  2. less 解决 http://www.lesscss.net/functions/#color-definition-argb-color-
 
 #### safari 下 transition 引起的闪烁问题
-
-加个 ` transform: translate3d(0, 0, 0);`
+    加个 ` transform: translate3d(0, 0, 0);`
