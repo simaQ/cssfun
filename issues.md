@@ -52,4 +52,5 @@ see solution at:
   2. less 解决 http://www.lesscss.net/functions/#color-definition-argb-color-
 
 #### safari 下 transition 引起的闪烁问题
-    加个 ` transform: translate3d(0, 0, 0);`
+
+- 加个 ` transform: translate3d(0, 0, 0);`
